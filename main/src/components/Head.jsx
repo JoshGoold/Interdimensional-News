@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Head = () => {
   const [story, setStory] = useState({
@@ -26,6 +26,11 @@ const Head = () => {
       console.error(e.message);
     }
   };
+
+  useEffect(()=>{
+    situationRoom()
+    situationRoom()
+  },[])
 
   const list = {
     Gender: ["Male", "Female"],
